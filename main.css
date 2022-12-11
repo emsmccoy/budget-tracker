@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik&display=swap');
+
+
+body {
+    color: #fff;
+    background-color: #2e2e2e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    margin: 50px auto;
+    width: 400px;
+}
+
+h1 {
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+h2 {
+    border-bottom: 2px solid rgb(241, 241, 241);
+    padding-bottom: 10px;
+    margin: 40px 0 10px;
+}
+
+h3 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+.overview-container {
+    background-color: rgb(63, 60, 60);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-radius: 7px;
+}
+
+.overview-container>div {
+    flex: 1;
+    text-align: center;
+}
+
+.overview-container>div:first-of-type {
+    border-right: 1px solid rgb(63, 60, 60);
+}
+
+
+.income {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+    color: #2ecc71;
+}
+
+.expenses {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+    color: #c0392b;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+    color: #fff;
+    background-color: rgb(63, 60, 60);
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.button {
+    letter-spacing: 5px;
+    cursor: pointer;
+    background-color: #7365b9;
+    color: #fff;
+    border: 0;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 20px 0 30px;
+    padding: 10px;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-button:hover {
+    box-shadow: 1px 2px 5px #ebeccada,
+        2px 3px 5px #892be2ce;
+}
+
+.button:focus,
+.delete-button:focus {
+    outline: 0;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li {
+    background-color: rgb(63, 60, 60);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.list li.positive {
+    border-right: 5px solid #2ecc71;
+}
+
+.list li.negative {
+    border-right: 5px solid #dd1a04;
+}
+
+.delete-button {
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #dd1a04;
+    border: 0;
+    line-height: 36px;
+    padding: 2px 20px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(10%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+
+}
+
+.list li:hover .delete-button {
+    opacity: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
